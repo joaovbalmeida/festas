@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{% block content %}
+    {% load static %}
+    {% get_media_prefix as media_prefix %}
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#1e52bd">
+        <tr>
+            <td align="center" valign="top">
+                <!-- Main -->
+                <table width="650" border="0" cellspacing="0" cellpadding="0" class="mobile-shell">
+                    <tr>
+                        <td class="td" style="width:650px; min-width:650px; font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;">
+                            <!-- Header -->
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td class="p30-15" style="padding: 40px 0px 20px 0px;">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <th class="column-top"style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
+                                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td align="center">
+                                                                <table class="center" border="0" cellspacing="0" cellpadding="0"style="text-align:center;">
+                                                                    <tr>
+                                                                        <td class="img" width="32"style="font-size:0pt; line-height:0pt; text-align:left;"><a href="https://www.facebook.com/joaovbalmeida" target="_blank"><img src="{% static 'img/free_ico_facebook.jpg' %}" width="14" height="13" border="0" alt="" /></a></td>
+                                                                        <td class="img" width="14"style="font-size:0pt; line-height:0pt; text-align:left;"><a href="https://www.instagram.com/joaovbalmeida/" target="_blank"><img src="{% static 'img/free_ico_instagram.jpg' %}" width="14" height="13" border="0" alt="" /></a></td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </th>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- END Top bar -->
+                                <!-- Logo -->
+                                <tr>
+                                    <td bgcolor="#1546a9" class="p30-15 img-center" style="padding: 30px; border-radius: 20px 20px 0px 0px; font-size:0pt; line-height:0pt; text-align:center;"><a href="{% url 'home' %}"><img class="header-image" src="{% static 'img/logo.png' %}"  border="0" alt="" /></a></td>
+                                </tr>
+                                <!-- END Logo -->
+                            </table>
+                            <!-- END Header -->
+                                
+                            <!-- Section 1 -->
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ebebeb">
+                                <tr>
+                                    <td class="p30-15-0" style="padding: 20px 30px 50px 30px;" bgcolor="#ffffff">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td style="padding-bottom: 25px;">
+                                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td class="fluid-img"style="font-size:0pt; line-height:0pt; text-align:center;"><img class="event-image" src="{% static 'img/header.jpg' %}" border="0" alt="" /></td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="h2-center"style="color:#000000; font-family:'Raleway', Arial,sans-serif; font-size:32px; line-height:36px; text-align:center; padding-bottom:30px;">{{ event.name }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center"style="color:#5d5c5c; font-family:'Raleway', Arial,sans-serif; font-size:14px; line-height:22px; text-align:justified; padding-bottom:30px; white-space:pre-wrap;">{{ event.description }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center">
+                                                    <a href="{{ event.link }}" target="_blank" class="button-secondary m-left">Ingressos</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!-- END Section 1 -->
+                            
+                            <!-- Footer -->
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td class="p30-15-0" bgcolor="#ffffff" style="border-top: 1px solid #ebebeb; border-radius: 0px 0px 20px 20px; padding: 60px 30px 0px 30px;">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td class="m-padder2 pb30" align="center"style="padding-bottom:30px;">
+                                                    <table class="center" border="0" cellspacing="0" cellpadding="0"style="text-align:center;">
+                                                        <tr>
+                                                            <td class="img" width="60" style="font-size:0pt; line-height:0pt; text-align:center;"><a href="https://www.facebook.com/joaovbalmeida/" target="_blank"><img src="{% static 'img/ico4_facebook.png' %}" width="26" height="26" border="0" alt="" /></a></td>
+                                                            <td class="img" width="60" style="font-size:0pt; line-height:0pt; text-align:center;"><a href="https://www.instagram.com/joaovbalmeida/" target="_blank"><img src="{% static 'img/ico4_instagram.png' %}" width="26" height="26" border="0" alt="" /></a></td>
+                                                            <td class="img" width="60" style="font-size:0pt; line-height:0pt; text-align:center;"><a href="https://www.linkedin.com/in/joão-victor-almeida-5a9a31134/" target="_blank"><img src="{% static 'img/ico4_linkedin.png' %}" width="26" height="26" border="0" alt="" /></a></td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" class="p30-15" style="padding: 30px;">
+                                                    <table class="center" border="0" cellspacing="0" cellpadding="0"style="text-align:center;">
+                                                        <tr>
+                                                            <th class="column-top" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
+                                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                    <tr>
+                                                                        <td class="text-footer"style="color:#5d5c5c; font-family:'Raleway', Arial,sans-serif; font-size:13px; line-height:22px; text-align:left;">
+                                                                            <text>Copyright @ 2019 João Victor Almeida</text>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </th>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <!-- END Main -->
+            </td>
+        </tr>
+    </table>
+{% endblock %}

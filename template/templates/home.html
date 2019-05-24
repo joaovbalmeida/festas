@@ -36,7 +36,7 @@
                                 <!-- END Top bar -->
                                 <!-- Logo -->
                                 <tr>
-                                    <td bgcolor="#1546a9" class="p30-15 img-center" style="padding: 30px; border-radius: 20px 20px 0px 0px; font-size:0pt; line-height:0pt; text-align:center;"><a href="#" target="_blank"><img class="header-image" src="{% static 'img/logo.png' %}"  border="0" alt="" /></a></td>
+                                    <td bgcolor="#1546a9" class="p30-15 img-center" style="padding: 30px; border-radius: 20px 20px 0px 0px; font-size:0pt; line-height:0pt; text-align:center;"><a target="_blank"><img class="header-image" src="{% static 'img/logo.png' %}"  border="0" alt="" /></a></td>
                                 </tr>
                                 <!-- END Logo -->
                             </table>
@@ -48,22 +48,13 @@
                                     <td class="p30-15-0" style="padding: 50px 30px 0px;" bgcolor="#ffffff">
                                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                             <tr>
-                                                <td class="h5-center"style="color:#a1a1a1; font-family:'Raleway', Arial,sans-serif; font-size:16px; line-height:22px; text-align:center; padding-bottom:5px;">Ut enim minim Veniam Quis</td>
+                                                <td class="h5-center"style="color:#a1a1a1; font-family:'Raleway', Arial,sans-serif; font-size:16px; line-height:22px; text-align:center; padding-bottom:5px;">Códigos Promocionais</td>
                                             </tr>
                                             <tr>
-                                                <td class="h2-center"style="color:#000000; font-family:'Playfair Display', Times, 'Times New Roman', serif; font-size:32px; line-height:36px; text-align:center; padding-bottom:20px;">Darure Reprehenderit Velit!</td>
+                                                <td class="h2-center"style="color:#000000; font-family:'Playfair Display', Times, 'Times New Roman', serif; font-size:32px; line-height:36px; text-align:center; padding-bottom:20px;">Seus eventos em um só lugar!</td>
                                             </tr>
                                             <tr>
-                                                <td class="text-center"style="color:#5d5c5c; font-family:'Raleway', Arial,sans-serif; font-size:14px; line-height:22px; text-align:center; padding-bottom:22px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo conse.</td>
-                                            </tr>
-                                            <tr>
-                                                <td align="center">
-                                                    <table border="0" cellspacing="0" cellpadding="0">
-                                                        <tr>
-                                                            <td class="text-button-orange"style="background:#e85711; color:#ffffff; font-family:'Kreon', 'Times New Roman', Georgia, serif; font-size:14px; line-height:18px; text-align:center; padding:10px 30px; border-radius:20px;"><a href="#" target="_blank" class="link-white"style="color:#ffffff; text-decoration:none;"><span class="link-white"style="color:#ffffff; text-decoration:none;">View More</span></a></td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
+                                                <td class="text-center"style="color:#5d5c5c; font-family:'Raleway', Arial,sans-serif; font-size:14px; line-height:22px; text-align:center; padding-bottom:22px;">Olá amigos!<br><br>Criei esse site pra facilitar a divulgação de códigos promocionais de eventos, estarei mantendo todos os eventos com suas respectivas infos e códigos promocionais aqui.<br><br>Abraços e Beijos,<br>JOAOV</td>
                                             </tr>
                                         </table>
                                     </td>
@@ -77,14 +68,17 @@
                                     <td>
                                         <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#dde8fd">
                                             <tr>
-                                                <td class="fluid-img"style="font-size:0pt; line-height:0pt; text-align:left;"><img src="{% static 'img/free_white_blue.jpg' %}" width="650" height="162" border="0" alt="" /></td>
+                                                <td class="fluid-img"style="font-size:0pt; line-height:0pt; text-align:left;">
+                                                    <img src="{% static 'img/free_white_blue.jpg' %}" width="650" height="162" border="0" alt="" />
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <td class="p0-15" style="padding: 0px 30px;">
                                                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                         <tr>
-                                                            <td class="h2-center"style="color:#000000; font-family:'Playfair Display', Times, 'Times New Roman', serif; font-size:32px; line-height:36px; text-align:center; padding-bottom:20px;"><multiline>Upcoming Events</multiline></td>
+                                                            <td class="h2-center"style="color:#000000; font-family:'Playfair Display', Times, 'Times New Roman', serif; font-size:32px; line-height:36px; text-align:center; padding-bottom:40px;"><multiline>Próximos Eventos</multiline></td>
                                                         </tr>
+                                                        {% for e in events %}
                                                         <tr>
                                                             <td class="pb40"style="padding-bottom:40px;">
                                                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -95,10 +89,10 @@
                                                                                     <th class="column-top" width="60"style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
                                                                                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                                                             <tr>
-                                                                                                <td class="date"style="color:#000000; font-family:'Raleway', Arial,sans-serif; font-size:12px; line-height:16px; text-align:left; padding-bottom:6px;"><multiline>Sept</multiline></td>
+                                                                                                <td class="date"style="color:#000000; font-family:'Raleway', Arial,sans-serif; font-size:12px; line-height:16px; text-align:left; padding-bottom:6px;"><multiline>{{ e.month }}</multiline></td>
                                                                                             </tr>
                                                                                                 <tr>
-                                                                                                <td class="day"style="color:#1e52bd; font-family:'Raleway', Arial,sans-serif; font-size:40px; line-height:44px; text-align:left; font-weight:bold;"><multiline>17</multiline></td>
+                                                                                                <td class="day"style="color:#1e52bd; font-family:'Raleway', Arial,sans-serif; font-size:40px; line-height:44px; text-align:left; font-weight:bold;"><multiline>{{ e.day }}</multiline></td>
                                                                                             </tr>
                                                                                         </table>
                                                                                     </th>
@@ -106,23 +100,25 @@
                                                                                     <th class="column-top"style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
                                                                                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                                                             <tr>
-                                                                                                <td class="h5-black black"style="font-family:'Raleway', Arial,sans-serif; font-size:14px; line-height:18px; text-align:left; padding-bottom:15px; text-transform:uppercase; font-weight:bold; color:#000000;"><multiline>Headline</multiline></td>
+                                                                                                <td class="h5-black black"style="font-family:'Raleway', Arial,sans-serif; font-size:14px; line-height:18px; text-align:left; padding-bottom:15px; text-transform:uppercase; font-weight:bold; color:#000000;"><multiline>{{ e.name }}</multiline></td>
                                                                                             </tr>
                                                                                             <tr>
-                                                                                                <td class="text black"style="font-family:'Raleway', Arial,sans-serif; font-size:14px; line-height:22px; text-align:left; color:#000000;"><multiline>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempo dolore setr tempore alipsinung.</multiline></td>
+                                                                                                <td class="text black"style="font-family:'Raleway', Arial,sans-serif; font-size:14px; line-height:22px; text-align:left; color:#000000; white-space:pre-wrap;"><multiline>{{ e.short_description }}</multiline></td>
                                                                                             </tr>
                                                                                         </table>
                                                                                     </th>
                                                                                     <th class="column-empty" width="10"style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; direction:ltr;"></th>
-                                                                                    <th class="column-top" width="156"style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
-                                                                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                                    <th class="column-top" width="156"style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:middle;">
+                                                                                        <table class="m-top" width="100%" border="0" cellspacing="0" cellpadding="0">
                                                                                             <tr>
-                                                                                                <td align="right">
-                                                                                                    <table class="m-left" border="0" cellspacing="0" cellpadding="0">
-                                                                                                        <tr>
-                                                                                                            <td class="text-button button-blue"style="font-family:'Kreon', Georgia, serif; font-size:14px; line-height:18px; text-align:center; padding:10px 30px; border-radius:20px; background:transparent; color:#1e52bd; border:1px solid #1e52bd;"><multiline><a href="#" target="_blank" class="link-blue"style="color:#1e52bd; text-decoration:none;"><span class="link-blue"style="color:#1e52bd; text-decoration:none;">View More</span></a></multiline></td>
-                                                                                                        </tr>
-                                                                                                    </table>
+                                                                                                <td align="right" class="m-left">
+                                                                                                    <a href="{% url 'event' e.id %}" target="_blank" class="button m-left">Mais Info</a>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr height="40px" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; direction:ltr;"></tr>
+                                                                                            <tr>
+                                                                                                <td align="right" class="m-left">
+                                                                                                    <a href="{{ e.link }}" target="_blank" class="button m-left">Ingressos</a>
                                                                                                 </td>
                                                                                             </tr>
                                                                                         </table>
@@ -134,58 +130,7 @@
                                                                 </table>
                                                             </td>
                                                         </tr>
-                                                        <tr>
-                                                            <td class="pb40"style="padding-bottom:40px;">
-                                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                                                    <tr>
-                                                                        <th class="column-top" width="60"style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
-                                                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                                                                <tr>
-                                                                                    <td class="date"style="color:#000000; font-family:'Raleway', Arial,sans-serif; font-size:12px; line-height:16px; text-align:left; padding-bottom:6px;"><multiline>Sept</multiline></td>
-                                                                                </tr>
-                                                                                    <tr>
-                                                                                    <td class="day"style="color:#1e52bd; font-family:'Raleway', Arial,sans-serif; font-size:40px; line-height:44px; text-align:left; font-weight:bold;"><multiline>17</multiline></td>
-                                                                                </tr>
-                                                                            </table>
-                                                                        </th>
-                                                                        <th class="column-empty" width="10"style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; direction:ltr;"></th>
-                                                                        <th class="column-top"style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
-                                                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                                                                <tr>
-                                                                                    <td class="h5-black black"style="font-family:'Raleway', Arial,sans-serif; font-size:14px; line-height:18px; text-align:left; padding-bottom:15px; text-transform:uppercase; font-weight:bold; color:#000000;"><multiline>Headline</multiline></td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td class="text black"style="font-family:'Raleway', Arial,sans-serif; font-size:14px; line-height:22px; text-align:left; color:#000000;"><multiline>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempo dolore setr tempore alipsinung.</multiline></td>
-                                                                                </tr>
-                                                                            </table>
-                                                                        </th>
-                                                                        <th class="column-empty" width="10"style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; direction:ltr;"></th>
-                                                                        <th class="column-top" width="156"style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
-                                                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                                                                <tr>
-                                                                                    <td align="right">
-                                                                                        <table class="m-left" border="0" cellspacing="0" cellpadding="0">
-                                                                                            <tr>
-                                                                                                <td class="text-button button-blue"style="font-family:'Kreon', Georgia, serif; font-size:14px; line-height:18px; text-align:center; padding:10px 30px; border-radius:20px; background:transparent; color:#1e52bd; border:1px solid #1e52bd;"><multiline><a href="#" target="_blank" class="link-blue"style="color:#1e52bd; text-decoration:none;"><span class="link-blue"style="color:#1e52bd; text-decoration:none;">View More</span></a></multiline></td>
-                                                                                            </tr>
-                                                                                        </table>
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </table>
-                                                                        </th>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td align="center">
-                                                                <table border="0" cellspacing="0" cellpadding="0">
-                                                                    <tr>
-                                                                        <td class="text-button button-blue2"style="font-family:'Kreon', Georgia, serif; font-size:14px; line-height:18px; text-align:center; padding:10px 30px; border-radius:20px; background:#1e52bd; color:#ffffff;"><multiline><a href="#" target="_blank" class="link-white"style="color:#ffffff; text-decoration:none;"><span class="link-white"style="color:#ffffff; text-decoration:none;">View All Events</span></a></multiline></td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
+                                                        {% endfor %}
                                                     </table>
                                                 </td>
                                             </tr>
@@ -193,7 +138,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="fluid-img"style="font-size:0pt; line-height:0pt; text-align:left;"><img src="{% static 'img/free_blue_white.jpg' %}" width="650" height="160" border="0" alt="" /></td>
+                                    <td class="fluid-img"style="font-size:0pt; line-height:0pt; text-align:left;"><img src="{% static 'img/free_blue_white.jpg' %}" border="0" alt="" /></td>
                                 </tr>
                             </table>
                             <!-- END Section 2 -->
@@ -201,13 +146,10 @@
                             <!-- Section 3 -->
                             <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
                                 <tr>
-                                    <td class="p30-15-0" style="padding: 10px 30px 70px 30px;">
+                                    <td class="p30-15-0" style="padding: 10px 30px 30px 30px;">
                                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                             <tr>
-                                                <td class="h5-center"style="color:#a1a1a1; font-family:'Raleway', Arial,sans-serif; font-size:16px; line-height:22px; text-align:center; padding-bottom:5px;"><multiline>Ut enim minim Veniam Quis</multiline></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="h2-center"style="color:#000000; font-family:'Playfair Display', Times, 'Times New Roman', serif; font-size:32px; line-height:36px; text-align:center; padding-bottom:20px;"><multiline>Text With Title Example</multiline></td>
+                                                <td class="h5-center"style="color:#a1a1a1; font-family:'Raleway', Arial,sans-serif; font-size:16px; line-height:22px; text-align:center; padding-bottom:5px;"><multiline>"Live life to the fullest!"</multiline></td>
                                             </tr>
                                             <tr>
                                                 <td style="padding-bottom: 25px;">
@@ -218,20 +160,6 @@
                                                     </table>
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                <td class="text-center pb20"style="color:#5d5c5c; font-family:'Raleway', Arial,sans-serif; font-size:14px; line-height:22px; text-align:center; padding-bottom:20px;"><multiline>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <span class="m-hide"><br /></span>incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud <span class="m-hide"><br /></span>exercitation ullamco laboris nisi ut aliquip ex ea commodo conse.</multiline></td>
-                                            </tr>
-                                            <!-- Button -->
-                                            <tr>
-                                                <td align="center">
-                                                    <table border="0" cellspacing="0" cellpadding="0">
-                                                        <tr>
-                                                            <td class="text-button3"style="color:#000000; font-family:'Kreon', 'Times New Roman', Georgia, serif; font-size:14px; line-height:18px; text-align:center; border:1px solid #000000; padding:10px 30px; border-radius:20px;"><multiline><a href="#" target="_blank" class="link"style="color:#000001; text-decoration:none;"><span class="link"style="color:#000001; text-decoration:none;">View More</span></a></multiline></td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                            <!-- END Button -->
                                         </table>
                                     </td>
                                 </tr>
@@ -267,9 +195,9 @@
                                                 <td class="m-padder2 pb30" align="center"style="padding-bottom:30px;">
                                                     <table class="center" border="0" cellspacing="0" cellpadding="0"style="text-align:center;">
                                                         <tr>
-                                                            <td class="img" width="40" style="font-size:0pt; line-height:0pt; text-align:center;"><a href="https://www.facebook.com/joaovbalmeida/" target="_blank"><img src="{% static 'img/ico4_facebook.png' %}" width="26" height="26" border="0" alt="" /></a></td>
-                                                            <td class="img" width="40" style="font-size:0pt; line-height:0pt; text-align:center;"><a href="https://www.instagram.com/joaovbalmeida/" target="_blank"><img src="{% static 'img/ico4_instagram.png' %}" width="26" height="26" border="0" alt="" /></a></td>
-                                                            <td class="img" width="40" style="font-size:0pt; line-height:0pt; text-align:center;"><a href="https://www.linkedin.com/in/joão-victor-almeida-5a9a31134/" target="_blank"><img src="{% static 'img/ico4_linkedin.png' %}" width="26" height="26" border="0" alt="" /></a></td>
+                                                            <td class="img" width="60" style="font-size:0pt; line-height:0pt; text-align:center;"><a href="https://www.facebook.com/joaovbalmeida/" target="_blank"><img src="{% static 'img/ico4_facebook.png' %}" width="26" height="26" border="0" alt="" /></a></td>
+                                                            <td class="img" width="60" style="font-size:0pt; line-height:0pt; text-align:center;"><a href="https://www.instagram.com/joaovbalmeida/" target="_blank"><img src="{% static 'img/ico4_instagram.png' %}" width="26" height="26" border="0" alt="" /></a></td>
+                                                            <td class="img" width="60" style="font-size:0pt; line-height:0pt; text-align:center;"><a href="https://www.linkedin.com/in/joão-victor-almeida-5a9a31134/" target="_blank"><img src="{% static 'img/ico4_linkedin.png' %}" width="26" height="26" border="0" alt="" /></a></td>
                                                         </tr>
                                                     </table>
                                                 </td>
