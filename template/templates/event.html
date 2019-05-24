@@ -36,7 +36,7 @@
                                 <!-- END Top bar -->
                                 <!-- Logo -->
                                 <tr>
-                                    <td bgcolor="#1546a9" class="p30-15 img-center" style="padding: 30px; border-radius: 20px 20px 0px 0px; font-size:0pt; line-height:0pt; text-align:center;"><a href="{% url 'home' %}"><img class="header-image" src="{{ media_prefix }}{{ event.image }}"  border="0" alt="" /></a></td>
+                                    <td bgcolor="#1546a9" class="p30-15 img-center" style="padding: 30px; border-radius: 20px 20px 0px 0px; font-size:0pt; line-height:0pt; text-align:center;"><a href="{% url 'home' %}"><img class="header-image" src="{% static 'img/logo.png' %}"  border="0" alt="" /></a></td>
                                 </tr>
                                 <!-- END Logo -->
                             </table>
@@ -51,7 +51,7 @@
                                                 <td style="padding-bottom: 25px;">
                                                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                         <tr>
-                                                            <td class="fluid-img"style="font-size:0pt; line-height:0pt; text-align:center;"><img class="event-image" src="{% static 'img/header.jpg' %}" border="0" alt="" /></td>
+                                                            <td class="fluid-img"style="font-size:0pt; line-height:0pt; text-align:center;"><img class="event-image" src="{{ media_prefix }}{{ event.image }}" border="0" alt="" /></td>
                                                         </tr>
                                                     </table>
                                                 </td>
