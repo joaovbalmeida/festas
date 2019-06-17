@@ -7,7 +7,7 @@ class HomeView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(HomeView, self).get_context_data(**kwargs)
-        context['events'] = Event.objects.all()
+        context['events'] = Event.objects.all().order_by('date')
         return context
 
 class EventsView(TemplateView):

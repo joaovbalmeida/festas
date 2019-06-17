@@ -89,10 +89,10 @@
                                                                                     <th class="column-top" width="60"style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
                                                                                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                                                             <tr>
-                                                                                                <td class="date"style="color:#000000; font-family:'Raleway', Arial,sans-serif; font-size:12px; line-height:16px; text-align:left; padding-bottom:6px;"><multiline>{{ e.month }}</multiline></td>
+                                                                                                <td class="date"style="color:#000000; font-family:'Raleway', Arial,sans-serif; font-size:12px; line-height:16px; text-align:left; padding-bottom:6px;"><multiline>{{ e.date|date:"F" }}</multiline></td>
                                                                                             </tr>
                                                                                                 <tr>
-                                                                                                <td class="day"style="color:#1e52bd; font-family:'Raleway', Arial,sans-serif; font-size:40px; line-height:44px; text-align:left; font-weight:bold;"><multiline>{{ e.day }}</multiline></td>
+                                                                                                <td class="day"style="color:#1e52bd; font-family:'Raleway', Arial,sans-serif; font-size:40px; line-height:44px; text-align:left; font-weight:bold;"><multiline>{{ e.date|date:"j" }}</multiline></td>
                                                                                             </tr>
                                                                                         </table>
                                                                                     </th>

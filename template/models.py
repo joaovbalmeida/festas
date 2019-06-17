@@ -4,8 +4,7 @@ from django.db import models
 
 class Event(models.Model):
     name = models.CharField("Nome", max_length=255)
-    month = models.CharField("Mês", max_length=255)
-    day = models.CharField("Dia", max_length=255)
+    date = models.DateField("Data", auto_now=False, auto_now_add=False)
     link = models.CharField("Link", max_length=255)
     code = models.CharField("Código", max_length=255)
     short_description = models.TextField("Descrição Curta", null=True, blank=True)
